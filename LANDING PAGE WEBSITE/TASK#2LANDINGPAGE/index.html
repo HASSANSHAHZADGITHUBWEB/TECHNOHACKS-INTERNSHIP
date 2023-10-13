@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>landing Page </title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&display=swap" rel="stylesheet">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Libre Baskerville', serif;
+            font-size: 13px;
+            background-color: black;
+            color: white;
+        }
+
+        #marquee-div {
+            background-color: rgb(38, 41, 41);
+            width: 100vw;
+            height: 45px;
+
+        }
+
+        #marquee-div marquee {
+            font-size: 2rem;
+            text-decoration: underline;
+            letter-spacing: 3px;
+            word-spacing: 3px;
+        }
+
+        #navbar-div {
+            width: 100vw;
+            height: 74px;
+            /* background-color:aquamarine;; */
+        }
+
+        #logo {
+            width: max-content;
+            height: fit-content;
+            display: flex;
+            flex-direction: column;
+        }
+
+        #logo img {
+            border-radius: 125px;
+            width: 71px;
+            height: 54px;
+            margin-top: 4PX;
+            margin-left: 6px;
+
+        }
+
+        #logo p {
+            margin: 0px;
+            text-align: center;
+        }
+
+        #navbar-div ul {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            list-style: none;
+        }
+
+        ul li a {
+            font-size: 1.3rem;
+            text-decoration: none;
+            color: aliceblue;
+        }
+
+        a:hover {
+            color: #ca2b2b;
+            background-color: white;
+        }
+
+        #home {
+            width: 100vw;
+            height: 430px;
+            /* border:2px solid red; */
+            margin: 5px 2px;
+            background: url('image/back5.jpg');
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            opacity: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #home h1 {
+            padding-bottom: 36px;
+            font-size: 2rem;
+            transition-property: all;
+            transition-duration: 1s;
+        }
+
+        h1:hover {
+            color: rgb(98, 136, 243);
+        }
+
+        #home p {
+            font-size: 1rem;
+            padding-bottom: 3px; 
+            line-height: 15px;
+            margin-top: 8px;
+            
+        }
+
+        #earn-1 {
+            font-size: 15px;
+            color: rgb(205, 236, 25);
+            font-weight: 200;
+            font-style: bold;
+            transition-property: ALL;
+            transition-duration: 2S;
+        }
+
+        #earn-1:hover {
+            color: rgb(255, 18, 255);
+
+        }
+
+        #services {
+            width: 100%;
+            height: 524px;
+             border: 2px solid red; 
+             box-shadow: inset 2px 2px 12px;
+             display:flex;
+            justify-content:space-evenly;
+             position:relative;
+            top: 2px;
+
+
+        }
+
+        #services-div {
+            display: flex;
+            justify-content: center;
+            color: rgb(113, 25, 201);
+            position: relative;
+            top: 10;
+        }
+
+        .box{
+            width:243px;
+            height:455px;
+            border:2px solid red;
+            position: relative;
+            top:10px;
+            left:10px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 12px;
+            box-shadow:  2px 2px 12px 2px  blue;
+            border-top-right-radius: 25px;
+
+        }
+        .box img{
+            width:175px;
+            height:155px;
+            border:2px solid red;
+            border-radius:45px; 
+            margin-top:37px;
+            border-top-right-radius:12px;
+            margin-bottom: 12px;
+        }
+        .box p{
+            font-family: 'Times New Roman', Times, serif;
+            line-height:21px;
+            text-align: justify;
+            margin:0px 5px;
+        }
+        ::selection{
+            COLOR:rgb(106, 164, 187);
+            BACKGROUND:rgb(189, 129, 129);
+        }
+        .box button{
+            color:#ca2b2b;
+            margin:3px;
+            border:2px solid magenta;
+            border-top-right-radius: 12px;
+            border-bottom-left-radius: 12px;
+        }
+        #clients-div{
+            display: flex;
+            justify-content: center;
+            color: rgb(116, 34, 197);
+            position: relative;
+            top: 10;
+        }
+        #clients{
+            border:2px solid red;
+            width:100%;
+            height:160px;
+            display:flex;
+            justify-content: space-around;
+            align-items: center;
+            box-shadow: inset 2px 2px 12px;
+        }
+      
+        #clients img{
+            width:196px;
+            height:92px;
+        }
+        .img{
+            display:inline;
+        }
+        .circle{
+            border-radius: 89px;
+        }
+        #contact-div{
+            display: flex;
+            justify-content: center;
+            color: rgb(113, 9, 216);
+            position: relative;
+            top: 10;
+        }
+        #contact{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            border:2px solid red;
+            box-shadow: inset 2px 2px 12px;
+            padding:5px;
+        }
+        #contact .input{
+            width:344px;
+            height:34px;
+            margin:5px;
+            border-top-right-radius: 12px;
+            border:2px solid gray;
+            
+        }
+        .btn-last{
+            width:300px;
+            height:32px;
+            margin:5px;
+            border:2px solid rgb(35, 28, 138); 
+            box-shadow: inset 0px 0px 12px rgb(151, 80, 80);
+            cursor:pointer;
+        }
+       
+        
+    </style>
+</head>
+
+<body>
+    <header>
+
+
++        <div id="marquee-div">
+            <marquee>
+                WELCOME TO OUR INSTITUTE
+            </marquee>
+        </div>
+    </header>
+    <navbar>
+
+        <div id="navbar-div">
+            <ul>
+                <li>
+
+                    <div id="logo">
+                        <img src="image/LOGO.jpg" alt="TECHWORLD">
+                        <P>TECH WORLD</P>
+                    </div>
+                </li>
+                <li>
+                    <a href="#home">
+                        HOME
+                    </a>
+                </li>
+                <LI>
+                    <a href="#services">
+
+                        SERVICES
+                    </a>
+                </LI>
+                <LI>
+                    <a href="#clients">
+
+                        CLIENTS
+                    </a>
+                </LI>
+                <LI>
+                    <a href="#contact">
+
+                        CONTACT US
+                    </a>
+                </LI>
+                <li id="inputnav">
+                    &searhk;
+                    <input type="text" placeholder="search this website" />
+                </li>
+
+            </ul>
+        </div>
+    </navbar>
+
+    <div id="home">
+        <section>
+            <h1>
+                WANT TO BECOME SOMETHING SPECIAL
+            </h1>
+            <P>
+                JOIN OUR COMMUNITY TO BECOME SOMETHING SPECIAL AND BECOME FREELANCER AND DIGITAL MARKETER
+
+            </P>
+            <P ID="earn-1">
+                EARN UPTO 500$ USD
+            </P>
+        </section>
+    </div>
+    <div id="services-div">
+
+        <h1>
+            OUR SERVICES
+        </h1>
+    </div>
+
+    <div id="services">
+
+        <div class="box" id="box-1">
+            <img src="image/WEBDES1.jpg" alt="WEB COURSE">
+            <p>WEBSITE DESIGNING IS THE ONE OF THE MOST PROFICIENT AND WELL PAYING CAREEER IN THIS ERA.MANY PEOPLE DO WEB DEVELOPMENT AND START EARNING.MANY TOP LEVEL COMPANIES HIRE WEB DESIGNER AND GAVE HIM HANDSOME SALARY.TO BECOME A WELL WEB DESIGNER AND DEVELOPER JOIN OUR COMMUNITY.
+            </p>
+            <a href="#contact">
+
+                <button>
+                    CLICK HERE TO JOIN
+                </button>
+            </a>
+        </div>
+        <div class="box" id="box-2">
+            <img src="image/GrapHIC.png" alt="GRAPHIC COURSE">
+            <p>GRAPHIC DESIGNING IS ALSO GOOD PASSIONA FOR 
+                ALL PERSON WHO DO NOT ADAPT PROGRAMMING.MANY PROFESSIONAL DO GRAPHIC DESIGNING AND EARN MORE THAN A PROGRAMMAR.VIEWER LOVES GRAPHICS .GRAPHIC HAS MANY BRANCHES.TO BECOME A WELL GRAPHIC DESIGNER AND UX/UI DESIGNER JOIN OUR COMMUNITY
+            </p>
+            <a href="#contact">
+
+                <button >
+                    CLICK HERE TO JOIN
+                </button>
+            </a>
+            </div>
+        <div class="box" id="box-3">
+            <img src="image/DIGITAL.jpg" alt="DIGITAL COURSE">
+        <p>
+            DIGITAL MARKETING IS NOT A SKILL ITS AN ABILITY.TO BECOME MOST EARNER OF ANY COMPANY START DIGITAL MARKETING.MANY PRODUCT COMPANY WORK ONLINE AND SAY MARKETTER TO MAKE ADS AND DO SEOS.THEY PAY HANDOME SALARIES TO MARKETING AGENT .TO BECOME DIGITAL MARKET EXPERT JOIN OUR COMMUNITY.
+        </p>
+        <a href="#contact">
+
+            <button>
+                CLICK HERE TO JOIN
+            </button>
+        </a>
+        </div>
+
+    </div>
+
+    <div id="clients-div">
+
+        <h1>
+            OUR CLIENTS
+        </h1>
+    </div>
+    <div id="clients">
+        <div class="img">
+            <img src="image/nasa.png" alt="clients" id="img-nasa">
+        </div>
+        
+        <div class="img">
+            <img src="image/coco cola.png" alt="clients" id="coco">
+        </div>
+        <div class="img">
+            <img src="image/suparco.jpg" alt="clients" class="circle">
+        </div>
+        <div class="img">
+            <img src="image/apple.png" alt="clients" class="circle">
+        </div>
+    </div>
+    <div id="contact-div">
+
+        <h1>
+            CONTACT US HERE
+        </h1>
+    </div>
+    <div id="contact">
+        <input type="text" placeholder="ENTER A NAME" class="input">
+        <input type="email" placeholder="ENTER A EMAIL" class="input">
+        <input type="date" placeholder="ENTER DATE OF BIRTHDATE" class="input">
+        <input type="radio" name="gender" class="gen"> Male:
+        <input type="radio" name="gender" class="gen"> Female:
+       
+        <input type="text" class="input" placeholder="COURSE YOU JOIN">
+        <input type="tel" name="no" class="input" placeholder="ENTER PHONE NO">
+        <textarea name="text" class="input" cols="30" rows="10"
+        placeholder="ENTER ABOUT YOU"></textarea>
+        <button class="btn-last">
+            SUBMIT
+        </button> 
+
+    </div>
+    <footer style="text-align: center;">
+        <br/>
+        <br/>
+        &copy; Made by MUHAMMAD HASSAN SHAHZAD
+        <BR/>
+        INTERNEE AT TECHNOHACKS 2023
+    </footer>
+
+
+</body>
+
+</html>
