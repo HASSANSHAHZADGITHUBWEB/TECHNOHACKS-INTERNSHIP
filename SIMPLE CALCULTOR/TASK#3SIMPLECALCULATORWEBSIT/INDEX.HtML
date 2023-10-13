@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>MY CALCULATOR</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Heebo:wght@500&display=swap" rel="stylesheet">
+    <style>
+        
+            *{
+                box-sizing: border-box;
+            }
+        
+        body{
+            background-color:rgb(0, 0, 0);
+            font-family: 'Heebo', sans-serif;
+            font-size:22px;
+            color:white;
+            
+        }
+
+        #head{
+            font-size: 1.5rem;
+            display: flex;
+            position:relative;
+            top:1px;
+          justify-content: center;
+           
+        }
+        #head h1{
+            text-decoration: underline;
+            text-shadow: 2px 2px red;
+            color:rgb(230, 230, 238);
+          }
+          .tab{
+            height:500px;
+            margin-top:10px;
+            border:15px dotted rgb(109, 8, 240);
+            border-radius: 12px;
+            outline: 15px solid rgb(7, 205, 255);
+            margin-left:475px;
+            padding:15px;
+            padding-bottom: 20px;
+            display: inline-block;
+            box-shadow: inset 2px 2px 122px rgb(91, 243, 124);
+            background-color:#000000;
+            margin-bottom: 37px;
+
+        }
+          #input{
+            border:4px solid gray;
+            text-size-adjust: 12px;
+            border-radius: 122px;
+          }
+          #input input{
+            width:239px;
+            height:79px;
+            font-size: 45px;
+          }
+          tr{
+            line-height: 69px;
+          }
+        
+        input[type="button"] 
+        {
+            width: 54px;
+            height: 50px;
+            font-size: 29px;
+            margin: 3px 1px;
+            border:1px solid red;
+            box-shadow: inset 0px 0px 12px red;
+        }
+        #equal{
+            width:237px;
+            height:45px;
+        }
+        #equal-button{
+            margin-bottom: 12px;
+        }
+        footer{
+            text-align: center;
+        }
+        ::selection{
+            background: white;
+        }
+
+
+        @media only screen and (max-width:233px)
+        {
+            body{
+            margin:0px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="head">
+
+        <header>
+            
+            <h1>OURS CALCULATOR</h1>
+        </header>
+    </div>
+    <div class="tab">
+
+        <table>
+            <tr id="input">
+                <td colspan="4"><input type="text" id="result" ></td>
+            </tr>
+          
+            <tr>
+            <td><input type="button" value="7" onclick="appendToResult('7')"></td>
+            <td><input type="button" value="8" onclick="appendToResult('8')"></td>
+            <td><input type="button" value="9" onclick="appendToResult('9')"></td>
+            <td><input type="button" value="/" onclick="appendToResult('/')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="4" onclick="appendToResult('4')"></td>
+            <td><input type="button" value="5" onclick="appendToResult('5')"></td>
+            <td><input type="button" value="6" onclick="appendToResult('6')"></td>
+            <td><input type="button" value="*" onclick="appendToResult('*')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="1" onclick="appendToResult('1')"></td>
+            <td><input type="button" value="2" onclick="appendToResult('2')"></td>
+            <td><input type="button" value="3" onclick="appendToResult('3')"></td>
+            <td><input type="button" value="-" onclick="appendToResult('-')"></td>
+        </tr>
+        <tr>
+            <td><input type="button" value="0" onclick="appendToResult('0')"></td>
+            <td><input type="button" value="." onclick="appendToResult('.')"></td>
+            <td><input type="button" value="C" onclick="clearResult()"></td>
+            <td><input type="button" value="+" onclick="appendToResult('+')"></td>
+        </tr>
+        
+        <tr id="equal-button">
+            <td colspan="4"><input type="button" value="=" id="equal" onclick="calculateResult()"></td>
+        </tr>
+    </table>
+    
+</div>
+<hr/>
+<footer>
+    &copy; MADE BY MUHAMMAD HASSAN SHAHZAD
+    <br/>
+    Internee at TECHNOHACKS 2023
+</footer>
+    <script>
+        function appendToResult(value) {
+            document.getElementById('result').value += value;
+        }
+
+        function clearResult() {
+            document.getElementById('result').value = '';
+        }
+
+        function calculateResult() {
+            try {
+                document.getElementById('result').value = eval(document.getElementById('result').value);
+            } catch (error) {
+                document.getElementById('result').value = 'syntex error';
+            }
+        }
+    </script>
+</body>
+</html>
